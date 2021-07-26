@@ -8,6 +8,14 @@
 
 class OutputDock
 {
+	enum class OutputState : unsigned int
+	{
+		All = 0,
+		Warning = 1,
+		Error = 2,
+		StateEnd = 3
+	};
+
 	EventBinder<OutputDock> m_Binder;
 
 public:
