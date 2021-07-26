@@ -21,9 +21,7 @@ class TransformSystem : public System
 	TransformSystem(TransformSystem&) = delete;
 
 public:
-
 	static TransformSystem* GetSingleton();
 
 	void calculateTransforms(Scene* scene);
-
 };

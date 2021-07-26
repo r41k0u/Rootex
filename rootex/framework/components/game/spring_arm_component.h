@@ -15,7 +15,7 @@ class SpringArmComponent : public Component
 	DEPENDS_ON(TransformComponent);
 
 	Vector3 m_DesiredLocalPosition;
-	
+
 public:
 	SpringArmComponent(Entity& owner, const JSON::json& data);
 	~SpringArmComponent() = default;
@@ -26,7 +26,7 @@ public:
 	bool setupData() override;
 
 	Vector3 getDesiredLocalPosition() { return m_DesiredLocalPosition; }
-	void setDesiredLocalPosition(const Vector3& position) { m_DesiredLocalPosition=position; }
+	void setDesiredLocalPosition(const Vector3& position) { m_DesiredLocalPosition = position; }
 
 	void draw();
 };

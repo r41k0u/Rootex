@@ -3,7 +3,7 @@
 DEFINE_COMPONENT(SpringArmComponent);
 
 SpringArmComponent::SpringArmComponent(Entity& owner, const JSON::json& data)
-	: Component(owner)
+    : Component(owner)
     , m_DependencyOnTransformComponent(this)
 {
 }
@@ -25,7 +25,7 @@ void SpringArmComponent::draw()
 
 	if (ImGui::DragFloat3("##Position", &m_DesiredLocalPosition.x, 0.01f))
 	{
-		
+
 		transform->setPosition(m_DesiredLocalPosition);
 	}
 	ImGui::SameLine();
@@ -35,5 +35,4 @@ void SpringArmComponent::draw()
 	}
 
 	ImGui::SliderFloat("Lerp Factor", &m_Lerp, 0.0f, 1.0f);
-	
 }
