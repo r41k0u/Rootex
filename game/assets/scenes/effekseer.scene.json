@@ -2,9 +2,6 @@
     "ID": 4,
     "children": [],
     "entity": {
-        "Entity": {
-            "script": null
-        },
         "components": {
             "ParticleEffectComponent": {
                 "isMoving": false,
@@ -33,6 +30,8 @@
                         "z": 0.5
                     }
                 },
+                "overrideBoundingBox": false,
+                "passDown": 7,
                 "position": {
                     "x": 0.0,
                     "y": 0.0,
@@ -50,7 +49,8 @@
                     "z": 1.000000238418579
                 }
             }
-        }
+        },
+        "script": null
     },
     "importStyle": 0,
     "name": "effekseer",
