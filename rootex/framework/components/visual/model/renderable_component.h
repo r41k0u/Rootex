@@ -29,7 +29,7 @@ protected:
 	float getLODFactor(float viewDistance);
 
 public:
-	virtual ~RenderableComponent() = default;
+	virtual ~RenderableComponent() {};
 
 	void setVisible(bool enabled);
 	bool isVisible() const;

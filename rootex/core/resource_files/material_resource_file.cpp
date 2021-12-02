@@ -14,6 +14,14 @@ JSON::json MaterialResourceFile::getJSON() const
 	return j;
 }
 
+MaterialResourceFile::~MaterialResourceFile()
+{
+	if (m_Path.generic_string().find("default") != std::string::npos)
+	{
+		std::cout << "Sike";
+	}
+}
+
 void MaterialResourceFile::readJSON(const JSON::json& j)
 {
 	m_IsAlpha = j.value("alpha", false);

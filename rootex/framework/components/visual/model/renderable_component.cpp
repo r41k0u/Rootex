@@ -117,6 +117,10 @@ void RenderableComponent::setMaterialOverride(Ref<MaterialResourceFile> oldMater
 {
 	if (oldMaterial && newMaterial)
 	{
+		if (newMaterial->getPath().generic_string().find("default") != std::string::npos)
+		{
+			std::cout << "Sike";
+		}
 		m_MaterialOverrides[oldMaterial] = newMaterial;
 	}
 	else

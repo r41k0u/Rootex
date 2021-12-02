@@ -47,8 +47,6 @@ void ModelComponent::render(float viewDistance)
 	std::sort(m_ModelResourceFile->getMeshes().begin(), m_ModelResourceFile->getMeshes().end(), CompareMaterials);
 	int i = 0;
 
-	RenderableComponent::render(viewDistance);
-
 	for (auto& [material, meshes] : m_ModelResourceFile->getMeshes())
 	{
 		RenderSystem::GetSingleton()->getRenderer()->bind(m_MaterialOverrides.at(material).get());
